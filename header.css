@@ -1,0 +1,45 @@
+body {
+  font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #7ab6ce5b;
+}
+.signature-image {
+  width: 250px; /* Adjust size as needed */
+  height: 100px; /* Ensure the image remains square */
+  margin-top: 10px; /* Adds space above the image */
+  transition: transform 0.3s ease; /* Smooth transition effect */
+}
+.signature-image:hover {
+  transform: scale(2); /* Increase the size on hover */
+  transform: rotate(15deg); /* Rotate the image by 15 degrees */
+}
+
+header {
+  background-color: #7b9edf;
+  padding: 00px 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+header .social-links {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-links a {
+  text-decoration: none;
+  font-weight: 500;
+}
