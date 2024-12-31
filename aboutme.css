@@ -1,97 +1,101 @@
 main {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
+  max-width: 60%; /* Relative width for responsiveness */
+  margin: 20px auto;
+  padding: 15px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
-/*About me section */
+
+/* About me section */
 #about .about-container {
   display: flex;
   align-items: flex-start;
   gap: 20px;
   margin-top: 10px;
 }
-
 #about img {
   max-width: 200px;
   height: auto;
   border-radius: 8px;
   flex-shrink: 0;
 }
-
 #about .about-text {
   flex: 1;
 }
-
 #about .about-text p {
   margin: 0 0 10px;
   line-height: 1.6;
 }
-
 #about .about-text a {
   color: #007bff;
   text-decoration: none;
 }
-
-#about .about-text a:hover {
+#about .about-text a:active {
   text-decoration: underline;
 }
 .profile-picture {
-  width: 200px; /* Adjust size as needed */
-  height: 200px; /* Ensure the image remains square */
-  border-radius: 50%; /* Makes it round */
-  border: 3px solid #000000; /* Stylish border color */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a soft shadow */
-  object-fit: cover; /* Ensures the image scales properly */
-  margin-top: 10px; /* Adds space above the image */
-  transition: transform 0.3s ease; /* Smooth transition effect */
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid #000000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  margin-top: 10px;
+  transition: transform 0.3s ease;
 }
-
-.profile-picture:hover {
-  transform: scale(2); /* Increase the size on hover */
+.profile-picture:active {
+  transform: scale(4); /* Adjusted size */
+  position: fixed; /* Moves the element out of the document flow */
+  top: 50%; /* Centers vertically */
+  left: 50%; /* Centers horizontally */
+  transform: translate(-50%, -50%) scale(4); /* Adjust position and apply scale */
+  z-index: 1000; /* Brings the image to the front */
 }
 
 section {
   margin-bottom: 40px;
 }
 section h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
   border-bottom: 2px solid #ddd;
-  padding-bottom: 5px;
+  padding-bottom: 8px;
 }
 section img {
   max-width: 100%;
-  height: 200px;
+  height: auto;
   border-radius: 8px;
   margin-top: 10px;
 }
+
 #presentation ul {
   padding: 0;
-  list-style-type: none; /* Removes default list styling */
+  list-style-type: none;
 }
-
 .presentation-item {
   display: flex;
-  align-items: center; /* Align text and image vertically */
-  gap: 15px; /* Adds space between text and image */
+  align-items: center;
+  gap: 15px;
   margin-top: 20px;
-  margin-bottom: 20px; /* Adds space between the presentations */
+  margin-bottom: 20px;
 }
-
 .presentation-img {
-  width: 50px; /* Adjust image size */
-  margin: 0px;
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 50%; /* Makes it round */
-  border: 0.5px solid #000000; /* Stylish border color */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a soft shadow */
-  object-fit: cover; /* Ensures the image scales properly */
+  width: 50px;
+  height: auto;
+  border-radius: 50%;
+  border: 0.5px solid #000000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
-.presentation-img:hover {
-  transform: scale(7.0); /* Increase the size on hover */
+.presentation-img:active {
+  transform: scale(10); /* Adjusted size */
+  position: fixed; /* Moves the element out of the document flow */
+  top: 50%; /* Centers vertically */
+  left: 50%; /* Centers horizontally */
+  transform: translate(-50%, -50%) scale(10); /* Adjust position and apply scale */
+  z-index: 1000; /* Brings the image to the front */
 }
 
 #affiliations img {
@@ -100,9 +104,34 @@ section img {
   margin: 0px;
   display: inline-block;
   vertical-align: middle;
-  transition: transform 0.3s ease; /* Smooth transition for scaling */
+  transition: transform 0.3s ease;
+}
+#affiliations img:hover {
+  transform: scale(1.1);
 }
 
-#affiliations img:hover {
-  transform: scale(1.1); /* Increase the size on hover */
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  main {
+    max-width: 85%; /* Relative width for responsiveness */
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }  
+  #about .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  #about img {
+    max-width: 100%;
+  }
+  .presentation-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .presentation-img {
+    width: 80px;
+  }
 }
