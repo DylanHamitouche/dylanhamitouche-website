@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Dylan Hamitouche</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your external CSS if you have one -->
+    <style>
+        body {
+            font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #7ab6ce5b;
+        }
+        .signature-image {
+            width: 250px; /* Adjust size as needed */
+            height: 100px; /* Ensure the image remains square */
+            margin-top: 10px; /* Adds space above the image */
+            transition: transform 0.3s ease; /* Smooth transition effect */
+        }
+        .signature-image:hover {
+            transform: scale(2); /* Increase the size on hover */
+            transform: rotate(15deg); /* Rotate the image by 15 degrees */
+        }
+
+        header {
+            background-color: #7b9edf;
+            padding: 00px 40px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        header .social-links {
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .projects {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .projects h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .project {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .project-item {
+            background-color: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            width: 300px;
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        .project-item img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .project-item h3 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .project-item p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .project-item a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        footer {
+            background-color: #ffffff;
+            padding: 2px;
+            text-align: center;
+            margin-top: 40px;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+        footer .social-links {
+            display: flex;
+            justify-content: center; /* Center the social links */
+            gap: 15px; /* Space between the links */
+            margin-top: 10px; /* Add some space above the links */
+        }
+
+        footer .social-links a {
+            display: flex;
+            flex-direction: column; /* Stack the image and text */
+            align-items: center; /* Center-align the content */
+            text-decoration: none;
+            color: inherit; /* Keep default text color */
+        }
+
+        footer .social-links img {
+            width: 30px; /* Set icon size */
+            height: 30px;
+            margin-bottom: 5px; /* Add spacing between the icon and text */
+            border-radius: 50%; /* Optional: circular icons */
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
+          <a href="aboutme.html" style="text-decoration: none; color: inherit;">
+              <h1>
+                  <img src="main_page_images/signature_clean.png" alt="Signature" class="signature-image">
+              </h1>
+          </a>
+      </div>
+      <div class="social-links" style="display: flex; justify-content: center; gap: 30px; align-items: center;">
+          <a href="aboutme.html" style="text-decoration: none; color: #000000; font-weight: 500; margin: 0;">About Me</a>
+          <a href="projects.html" style="text-decoration: none; color: #000000; font-weight: 500; margin: 0;">Projects</a>
+
+      </div>
+  </header>
+
+    <div class="projects">
+        <h2>My Projects</h2>
+
+        <!-- Project 1 -->
+        <div class="project">
+            <div class="project-item">
+                <img src="projects_images/Monthly Outcomes.png" alt="Project 1">
+                <h3>Automating Actigraphy and REDCap Data Integration for Patient Summary Reports</h3>
+                <p>I wrote code to automatize plotting of collected actigraphy data (sleep and physical activity) and REDCap data (questionnaires assessing symptoms) from patients enrolled in the Deep Phenotyping and Digitalization at Douglas (DeeP-DD). These visualizations were used to generate monthly summary reports presented to patients."
+
+                </p>
+                <a href="https://github.com/DylanHamitouche/deepdd_summary_reports" target="_blank">View Project</a>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-item">
+                <img src="project2.jpg" alt="Project 2">
+                <h3>Project Title 2</h3>
+                <p>A brief description of the project. This could include technologies used, objectives, and results.</p>
+                <a href="https://link-to-project2.com" target="_blank">View Project</a>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-item">
+                <img src="project3.jpg" alt="Project 3">
+                <h3>Project Title 3</h3>
+                <p>A brief description of the project. This could include technologies used, objectives, and results.</p>
+                <a href="https://link-to-project3.com" target="_blank">View Project</a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <footer>
+
+        <h1>Contact Information</h1>
+        <p>dylan.hamitouche@mail.mcgill.ca</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/dylan-hamitouche-19097921b/" target="_blank" style="text-decoration: none; color: #007bff;">
+                <img src="main_page_images/linkedin.png" alt="LinkedIn logo" style="width: 24px; height: 24px; margin-right: 8px;">
+                <span style="font-weight: 500;">LinkedIn</span>
+            </a>
+            <a href="https://github.com/DylanHamitouche" target="_blank" style="text-decoration: none; color: #6e5494;">
+                <img src="main_page_images/github.jpg" alt="GitHub logo" style="width: 24px; height: 24px; margin-right: 8px;">
+                <span style="font-weight: 500;">GitHub</span>
+            </a>
+        </div>
+        <p>&copy; 2024 Dylan Hamitouche. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

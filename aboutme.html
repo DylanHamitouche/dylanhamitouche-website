@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dylan's Portfolio</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #7ab6ce5b;
+        }
+
+        
+        .github-picture {
+            width: 24px; /* Adjust size as needed */
+            height: 24px; /* Ensure the image remains square */
+            border-radius: 25%; /* Makes it round */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a soft shadow */
+            object-fit: cover; /* Ensures the image scales properly */
+            margin-right: 8px; /* Adds space above the image */
+        }
+        .linkedin-picture {
+            width: 24px; /* Adjust size as needed */
+            height: 24px; /* Ensure the image remains square */
+            border-radius: 25%; /* Makes it round */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a soft shadow */
+            object-fit: cover; /* Ensures the image scales properly */
+            margin-right: 8px; /* Adds space above the image */
+        }
+        header {
+            background-color: #7b9edf;
+            padding: 00px 40px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        header .social-links {
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        header .aboutme:hover {
+            transform: scale(1.1); /* Increase the size on hover */
+        }
+
+        header .projects:hover {
+            transform: scale(1.1); /* Increase the size on hover */
+        }
+
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        /*About me section */
+        #about .about-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        #about img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+
+        #about .about-text {
+            flex: 1;
+        }
+
+        #about .about-text p {
+            margin: 0 0 10px;
+            line-height: 1.6;
+        }
+
+        #about .about-text a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        #about .about-text a:hover {
+            text-decoration: underline;
+        }
+        .signature-image {
+            width: 250px; /* Adjust size as needed */
+            height: 100px; /* Ensure the image remains square */
+            margin-top: 10px; /* Adds space above the image */
+            transition: transform 0.3s ease; /* Smooth transition effect */
+        }
+        .signature-image:hover {
+            transform: scale(2); /* Increase the size on hover */
+            transform: rotate(15deg); /* Rotate the image by 15 degrees */
+        }
+        .profile-picture {
+            width: 200px; /* Adjust size as needed */
+            height: 200px; /* Ensure the image remains square */
+            border-radius: 50%; /* Makes it round */
+            border: 3px solid #000000; /* Stylish border color */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a soft shadow */
+            object-fit: cover; /* Ensures the image scales properly */
+            margin-top: 10px; /* Adds space above the image */
+            transition: transform 0.3s ease; /* Smooth transition effect */
+        }
+
+        .profile-picture:hover {
+            transform: scale(2); /* Increase the size on hover */
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        section h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+        section img {
+            max-width: 100%;
+            height: 200px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        #presentation ul {
+            padding: 0;
+            list-style-type: none; /* Removes default list styling */
+        }
+
+        .presentation-item {
+            display: flex;
+            align-items: center; /* Align text and image vertically */
+            gap: 15px; /* Adds space between text and image */
+            margin-top: 20px;
+            margin-bottom: 20px; /* Adds space between the presentations */
+        }
+
+        .presentation-img {
+            width: 50px; /* Adjust image size */
+            margin: 0px;
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 50%; /* Makes it round */
+            border: 0.5px solid #000000; /* Stylish border color */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a soft shadow */
+            object-fit: cover; /* Ensures the image scales properly */
+        }
+        .presentation-img:hover {
+            transform: scale(7.0); /* Increase the size on hover */
+        }
+        footer {
+            background-color: #ffffff;
+            padding: 2px;
+            text-align: center;
+            margin-top: 40px;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        footer .social-links {
+            display: flex;
+            justify-content: center; /* Center the social links */
+            gap: 15px; /* Space between the links */
+            margin-top: 10px; /* Add some space above the links */
+        }
+
+        footer .social-links a {
+            display: flex;
+            flex-direction: column; /* Stack the image and text */
+            align-items: center; /* Center-align the content */
+            text-decoration: none;
+            color: inherit; /* Keep default text color */
+        }
+
+        footer .social-links img {
+            width: 30px; /* Set icon size */
+            height: 30px;
+            margin-bottom: 5px; /* Add spacing between the icon and text */
+            border-radius: 50%; /* Optional: circular icons */
+        }
+
+
+        #affiliations img {
+            max-width: 150px;
+            height: auto;
+            margin: 0px;
+            display: inline-block;
+            vertical-align: middle;
+            transition: transform 0.3s ease; /* Smooth transition for scaling */
+        }
+
+        #affiliations img:hover {
+            transform: scale(1.1); /* Increase the size on hover */
+        }
+
+    </style>
+</head>
+<body>
+
+
+
+
+    <header>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
+            <a href="aboutme.html" style="text-decoration: none; color: inherit;">
+                <h1>
+                    <img src="main_page_images/signature_clean.png" alt="Signature" class="signature-image">
+                </h1>
+            </a>
+        </div>
+        <div class="social-links" style="display: flex; justify-content: center; gap: 30px; align-items: center;">
+            <a class="aboutme" href="aboutme.html" style="text-decoration: none; color: #000000; font-weight: 500; margin: 0;">About Me</a>
+            <a class="projects" href="projects.html" style="text-decoration: none; color: #000000; font-weight: 500; margin: 0;">Projects</a>
+
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+    <main>
+
+        <!-- ABOUT ME -->
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-container">
+                <img src="main_page_images/cropped_profile_picture.jpg" alt="Photo of Dylan" class="profile-picture">
+                <div class="about-text">
+                    <p>Hello! I am Dylan Hamitouche, a medical student at McGill University with a passion for neuroscience, psychology, philosophy, and technology.
+                        I am currently working as a student researcher in the 
+                        <a href="https://www.harroudlab.com/" target="_blank">Harroud Lab</a>
+                        at the Montreal Neurological Institute where I do research on multiple sclerosis (MS), with a particular emphasis on proteomics and biological aging.
+                        I also work for the McGill Lab for Computational Psychiatry and Translation (McPsyt) Lab at the Douglas Research Center where I study psychosis from a digital phenotyping approach.
+                    </p>
+                    <p>In my free time, I enjoy working out, reading, playing video games, and listening to the <a href="https://open.spotify.com/show/2MAi0BvDc6GTFvKFPXnkCL" target="_blank">Lex Fridman podcast</a> :)</p>
+                </div>
+            </div>
+
+
+            <!-- PUBLICATIONS -->
+        <section id="research">
+            <h2>Publications</h2>
+            <ul>
+                <li>PREPRINT: Hamitouche D, Barkat Y, Parekh D, Hammer E, Benrimoh D. Dynamic Indicators of Adherence and Retention in Digital Health Studies: Insights from the Brighten Study. Published online December 1, 2024. <a href="https://arxiv.org/abs/2412.00942" target="_blank">doi:10.48550/arXiv.2412.00942</a></li>
+            </ul>
+        
+
+
+
+            <!-- PRESENTATIONS -->
+        <section id="presentation">
+            <h2>Oral Presentations</h2>
+            <ul>
+                <li><span>Ding Y, Hamitouche D, Abdelhak A, Harroud A. Genetic-proteomic integration identifies novel blood-based biomarkers for preclinical multiple sclerosis. ACTRIMS Meeting, February 2025, West Palm Beach, FL.</span>
+                </li>
+                <li class="presentation-item">
+                    <img src="main_page_images/poster_presentation.jpg" alt="Poster Presentation McGill" class="presentation-img">
+                    <span>Hamitouche D., Benrimoh D. Deep-Phenotyping and Digitalization at Douglas. McGill University Student Research Day, November 2024, Montreal, QC.</span>
+                </li>
+            </ul>
+        </section>
+
+
+        <!-- AWARDS -->
+        </section>
+        <section id="awards">
+            <h2>Awards</h2>
+            <ul>
+                <li> <a href="https://forum.actrims.org/grants-awards#:~:text=ACTRIMS%20Educational%20Grants&text=Young%20Investigators%20are%20students%2C%20trainees,at%20the%20ACTRIMS%20Forum%202025." target="_blank">ACTRIMS</a>
+                Young Investigator Educational Grant for top scoring abstract
+                (Harroud Lab), 2024 </li>
+                <li>Mach-Gaensslen Foundation of Canada Student Grant (McPsyt Lab), 2024</li>
+                <li>Dr. Clarke K. McLeod Memorial Scholarship (McPsyt Lab), 2024</li>
+                <li>J. W. McConnell Scholarship (McGill University), 2022</li>
+                <li>Merit scholarship in the Health Science program (Cegep Montmorency), 2022</li>
+            </ul>
+        </section>
+
+
+        <!-- EDUCATION  -->
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li>M.D., McGill University (2023-2027)</li>
+                <li>Med-P Qualifying Year, McGill University (2022-2023). GPA: 3.96</li>
+                <li>DEC Health Science, Cegep Montmorency (2020-2022).</li>
+            </ul>
+        </section>
+
+
+        <!-- CERTIFICATIONS -->
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <ul>
+                <li>
+                    <a href="https://www.udemy.com/certificate/UC-1818f4b1-c638-44b2-9578-9dedf9a50bd1/" target="_blank">
+                    Python for Data Science and Machine Learning Bootcamp</a>, Udemy. 2024
+                </li>
+                <li>
+                    <a href="https://www.udemy.com/certificate/UC-9d55df26-e24b-4ece-9e87-712d97a5090d/" target="_blank">
+                       The Complete Python Bootcamp From Zero to Hero in Python</a>, Udemy. 2024
+                </li>
+            </ul>
+        </section>
+       
+
+
+        <!-- AFFILATIONS -->
+        <section id="affiliations">
+            <h2>Affiliations</h2>
+            <a href="https://www.mcgill.ca/" target="_blank">
+                <img src="main_page_images/mcgill.png" alt="McGill University">
+            </a>
+            <a href="https://www.mcgill.ca/neuro/" target="_blank">
+                <img src="main_page_images/neuro.png" alt="The Neuro">
+            </a>
+            <a href="https://douglas.research.mcgill.ca/" target="_blank">
+                <img src="main_page_images/douglas.png" alt="Douglas Research Center">
+            </a>
+            <a href="https://www.instagram.com/mcpsytlab/" target="_blank">
+                <img src="main_page_images/mcpsytlab.jpg" alt="Douglas Research Center">
+            </a>
+        </section>
+    </main>
+
+
+    <!-- CONTACT INFORMATION -->
+    <footer>
+        <h1>Contact Information</h1>
+        <p>dylan.hamitouche@mail.mcgill.ca</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/dylan-hamitouche-19097921b/" target="_blank" style="text-decoration: none; color: #007bff;">
+                <img src="main_page_images/linkedin.png" alt="LinkedIn logo" style="width: 24px; height: 24px; margin-right: 8px;">
+                <span style="font-weight: 500;">LinkedIn</span>
+            </a>
+            <a href="https://github.com/DylanHamitouche" target="_blank" style="text-decoration: none; color: #6e5494;">
+                <img src="main_page_images/github.jpg" alt="GitHub logo" style="width: 24px; height: 24px; margin-right: 8px;">
+                <span style="font-weight: 500;">GitHub</span>
+            </a>
+        </div>
+        <p>&copy; 2024 Dylan Hamitouche. All rights reserved.</p>
+    </footer>
+</body>
+</html>
