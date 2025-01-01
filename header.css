@@ -10,8 +10,7 @@ body {
   margin-top: 10px;
   transition: transform 0.3s ease;
 }
-.signature-image:hover,
-.signature-image:active {
+.signature-image:hover {
   transform: rotate(15deg); /* Smooth zoom and rotate */
 }
 header {
@@ -51,5 +50,8 @@ header .social-links {
   }
   .social-links {
     gap: 10px;
+  }
+  .signature-image:hover {
+    transform: none; /* Remove hovering rotation for mobile */
   }
 }

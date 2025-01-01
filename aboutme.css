@@ -44,13 +44,8 @@ main {
   margin-top: 10px;
   transition: transform 0.3s ease;
 }
-.profile-picture:active {
-  transform: scale(4); /* Adjusted size */
-  position: fixed; /* Moves the element out of the document flow */
-  top: 50%; /* Centers vertically */
-  left: 50%; /* Centers horizontally */
-  transform: translate(-50%, -50%) scale(4); /* Adjust position and apply scale */
-  z-index: 1000; /* Brings the image to the front */
+.profile-picture:hover {
+  transform: scale(1.5); /* Adjusted size */
 }
 
 section {
@@ -81,7 +76,7 @@ section img {
   margin-bottom: 20px;
 }
 .presentation-img {
-  width: 50px;
+  width: 100px;
   height: auto;
   border-radius: 50%;
   border: 0.5px solid #000000;
@@ -89,13 +84,8 @@ section img {
   object-fit: cover;
   transition: transform 0.3s ease;
 }
-.presentation-img:active {
-  transform: scale(10); /* Adjusted size */
-  position: fixed; /* Moves the element out of the document flow */
-  top: 50%; /* Centers vertically */
-  left: 50%; /* Centers horizontally */
-  transform: translate(-50%, -50%) scale(10); /* Adjust position and apply scale */
-  z-index: 1000; /* Brings the image to the front */
+.presentation-img:hover {
+  transform: scale(3);
 }
 
 #affiliations img {
@@ -132,6 +122,23 @@ section img {
     align-items: flex-start;
   }
   .presentation-img {
-    width: 80px;
+    width: 60%;
+  }
+  .profile-picture:hover {
+    transform: none; /* For mobile, we remove the scaling */
+  }
+  .presentation-img:hover {
+    transform: none; /* For mobile, we remove the scaling */
+  }
+  #affiliations img:hover {
+    transform: none; /* For mobile, we remove the scaling */
+  }
+  #affiliations img {
+    max-width:20%;
+    height: auto;
+    margin: 0px;
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
   }
 }
