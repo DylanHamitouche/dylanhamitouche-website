@@ -2,7 +2,8 @@ footer {
   background-color: #ffffff;
   padding: 2px;
   text-align: center;
-  margin-top: 40px;
+  margin-top :40px; /* Remove default side margins */
+  width: 100%;
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 footer .social-links {
@@ -23,6 +24,6 @@ footer .social-links a {
 footer .social-links img {
   width: 30px; /* Set icon size */
   height: 30px;
-  margin-bottom: 5px; /* Add spacing between the icon and text */
+  margin-bottom: 0px; /* Add spacing between the icon and text */
   border-radius: 50%; /* Optional: circular icons */
 }
