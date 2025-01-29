@@ -2,7 +2,8 @@ footer {
   background-color: #ffffff;
   padding: 2px;
   text-align: center;
-  margin-top :40px; /* Remove default side margins */
+  margin-top :125px; /* Remove default side margins */
+  margin-bottom: 0px;
   width: 100%;
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
